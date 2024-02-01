@@ -29,5 +29,14 @@ class ProdutoClass
         $lista = $resultado->fetchAll();
         return $lista;
     }
+
+    public function Desativar()
+    {
+        $sql= "UPDATE produto SET statusProduto = 'DESATIVADO' WHERE idProduto = $this->idProduto";
+
+        $connect = Conexao::LigarConexao();
+        $connect->exec($sql);
+        echo"<script> document.location = 'index.php?p=produtos'; </script>";
+    }
 }
 ?>

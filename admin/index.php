@@ -91,7 +91,7 @@ $paginaAtual = @$_GET['p'];
             <?php
             switch ($paginaAtual) {
                 case 'produtos':
-                    require_once('produtos/listar.php');
+                    require_once('produtos/produto.php');
                     break;
                 case 'funcionarios':
                     echo 'Funcionários';
