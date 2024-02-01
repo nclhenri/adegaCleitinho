@@ -1,0 +1,973 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+    list-style: none
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Noto+Sans:wght@300&display=swap');
+
+/* Reset */
+.site {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    height: 130px;
+    background-color: rgb(0, 0, 0);
+}
+
+.logoTamanho img {
+    width: 85%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 155%;
+    margin-left: -27%;
+
+}
+
+.menu {
+
+    margin-left: -37%;
+    display: flex;
+    align-items: center;
+
+
+}
+
+.menu ul {
+    display: flex;
+}
+
+.menu ul li:nth-child(2) {
+    margin: 0px 50px;
+}
+
+.PRT {
+    margin-right: 22px;
+}
+
+ .subMenu ul {
+    display: none;
+    
+} 
+.subMenu ul li {
+    padding: 5px;
+}
+
+.subMenu ul li a {
+    border-bottom: 2px solid #F2C84B;
+}
+
+
+.subMenu:hover ul {
+    z-index: 1;
+    display: block;
+    position: absolute;
+    margin-left: -35px;
+    background-color: #000000;
+    padding: 5px 0;
+    text-align: center;
+    border: 2px solid #F2C84B;
+
+  
+
+   
+}
+
+
+.menu ul li a {
+    text-decoration: none;
+    color: #F2C84B;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.menu ul li a:hover {
+    color: #ffedb5;
+    border-bottom: 3px solid #ffedb5;
+    transition: 0.1s ease;
+}
+
+.user {
+    display: none;
+}
+
+.menu button {
+    background-color: transparent;
+    border: none;
+}
+
+.header button {
+    background-color: transparent;
+    border: none;
+}
+
+/* SEÇÃO BUSCAR */
+
+.campoBuscar {
+    width: 100%;
+    background-color: black;
+    padding: 190px 245px 130px;
+    background: url(./img/bannertaligado2.png);
+}
+
+.campoBuscar h1 {
+    display: flex;
+    justify-content: center;
+    color: #F2E852;
+    border: 3px solid #F2E852;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.campoBuscar div {
+    display: flex;
+    justify-content: center;
+    margin-top: 6px;
+}
+
+.campoBuscar div button {
+    width: 3%;
+    border-radius: 10px;
+    background-color: white;
+    border: solid 1px black;
+    cursor: pointer;
+}
+
+.campoBuscar div button img {
+    width: 58%;
+}
+
+.campoBuscar div input {
+    width: 40%;
+    padding: 10px 14px 10px 8px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+/* SEÇÃO CATEGORIAS*/
+
+.categorias h2 {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.produtosCategorias {
+    display: flex;
+}
+
+
+
+.produtos h3 {
+    text-align: center;
+
+    color: black;
+}
+
+.produtos a {
+    text-decoration: none;
+}
+
+/* SEÇÃO COMO FUNCIONA */
+
+.funciona {
+    background-color: black;
+    padding: 15px;
+}
+
+.funciona h2 {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+    color: white;
+}
+
+.InstrucaoMedida {
+    width: 140px;
+    height: 140px;
+}
+
+.estruturaFunciona {
+    display: flex;
+    justify-content: space-between;
+}
+
+.instrucao {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 15%;
+}
+
+.instrucao h3 {
+    margin: 15px 0px 20px 0px;
+    color: #F2C84B;
+}
+
+.instrucao h4 {
+    margin-bottom: 25px;
+    color: white;
+}
+
+/* SEÇÃO PROMOCOES */
+/* .promocoes{
+    z-index: 1;
+    background: url(./img/bannertaligado.png);
+} */
+
+.promocoes {
+    background-color: white;
+    padding: 15px;
+}
+
+.promocoes h2 {
+    text-align: center;
+    margin: 40px 0px;
+    color: black;
+}
+
+.cardPromocoes {
+    width: 23%;
+    background: #ffffff;
+    padding: 15px;
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.cardPromocoes:hover {
+    box-shadow: 0 0 10px #2c2b2b;
+}
+
+.fundoComprar {
+    background-color: #32ba46;
+    height: 30px !important;
+    margin-bottom: 9px;
+    align-items: center;
+    padding: 6px;
+    border-radius: 5px;
+
+}
+
+.fundoComprar:hover {
+    background-color: #60c46f;
+    font-size: 1.1em;
+
+}
+
+.fundoComprar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.promocoesEstrutura {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardPromocoes div {
+    width: 240px;
+    height: 250px;
+    /* background-color: white; */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+.cardPromocoes h4 {
+    margin: 15px;
+    color: black;
+}
+
+.cardPromocoes h3 {
+    margin-top: 15px;
+    color: black;
+}
+
+.promocoes button {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 80px;
+    padding: 12px;
+    width: 20%;
+    justify-content: center;
+    font-size: 20px;
+    border-radius: 50px;
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+.promocoes button a {
+    list-style: none;
+    color: white;
+    text-decoration: none;
+
+}
+
+
+.promocoes button:hover {
+    font-size: 1.3em;
+    background: #F2C84B;
+    
+    transition: 0.5s;
+    color: #000000;
+}
+
+/* PROIBIDO PARA MENORES */
+
+.proibido {
+    background-color: red;
+    padding: 15px;
+}
+
+.proibido div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.proibido img {
+    width: 10%;
+    margin-right: 30px;
+}
+
+.avisos {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.avisos h2 {
+    font-size: 20px;
+    color: white;
+    margin: 5px;
+}
+
+
+/* SEÇÃO RODAPÉ */
+
+footer {
+    background: url(./img/bannertaligado2.png);
+    text-align: center;
+}
+
+footer section {
+    padding: 15px;
+}
+
+.contatos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.3em;
+    margin-top: 20px;
+
+}
+
+.estruturaRodape {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.contatos a {
+    text-decoration: none;
+    color: #F2C84B;
+}
+
+.estruturaRodape ul {
+    display: flex;
+    list-style: none;
+}
+
+.estruturaRodape ul li a:nth-child(1) {
+    margin-right: 15px;
+}
+
+.estruturaRodape ul li a img {
+    margin-top: 15px;
+}
+
+
+footer section div {
+    display: flex;
+}
+
+.centralizar {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.estruturaPagamento {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.fundoPagamento {
+    background-color: #F2C84B;
+    border-radius: 20px;
+    margin-top: 25px;
+}
+
+.estruturaPagamento img {
+    margin-bottom: 15px;
+
+}
+
+.local {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #F2C84B;
+    font-size: 1.6em;
+}
+
+.desenvolvido {
+    background-color: #F2C84B;
+    color: rgb(0, 0, 0);
+}
+
+.nomes {
+    background-color: #000000;
+    color: #F2C84B;
+}
+
+.maps iframe {
+    width: 100%;
+    padding: 1.5%;
+}
+
+.maps div {
+    border: solid 5px #F2C84B;
+}
+
+
+.corTudo {
+    background-color: #000000;
+
+}
+
+.todoContato {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0px 80px;
+}
+
+.todoContato div {
+
+    padding: 6px;
+}
+
+.contatoN h2 {
+    font-size: 2.9em;
+    margin-bottom: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.contatoN ul {
+    line-height: 50px;
+}
+
+.contatoN ul a {
+    text-decoration: none;
+    color: #F2C84B;
+    font-size: 1.3em;
+
+
+}
+
+.caixas input {
+    width: 100%;
+    padding: 6px;
+    margin-top: 8px;
+
+}
+
+.caixas label {
+    color: rgb(0, 0, 0);
+    font-size: 1.5em;
+
+}
+
+.caixas1 div {
+    background-color: #F2C84B;
+    padding: 15px 80px;
+
+}
+
+.caixas1 {
+    border: solid 5px #ffe186;
+}
+
+.mens div {
+    display: flex;
+    flex-direction: column;
+}
+
+.mens ::placeholder {
+    padding: 5px 7px;
+    font-size: 1em;
+}
+
+
+.mens label {
+    color: rgb(0, 0, 0);
+    font-size: 1.5em;
+    margin-bottom: 7px;
+}
+
+
+.butao input {
+    padding: 4px;
+    width: 45%;
+    background-color: #ffd864;
+    color: #000000;
+    border-radius: 5px;
+    border: solid 2px #ffffff;
+    font-size: 1.2em;
+}
+
+.butao {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.butao input:hover {
+    background-color: #ffe9a9;
+
+}
+
+.caixas div input:hover {
+    border: solid 2px #f5b800;
+}
+
+.mens div textarea:hover {
+    border: solid 1px #f5b800;
+}
+
+.showCancelButton {
+    background-color: #F2C84B;
+}
+
+
+
+
+/* Parte do mensagem "Maior de 18" */
+
+div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
+    background-color: #F2C84B !important;
+    box-shadow: #F2C84B;
+
+}
+
+div:where(.swal2-container).swal2-center>.swal2-popup {
+    padding: 28px !important;
+}
+
+element.style {
+    display: block;
+}
+
+div:where(.swal2-container) h2:where(.swal2-title) {
+    color: #000000 !important;
+}
+
+div:where(.swal2-container).swal2-center>.swal2-popup {
+
+    border: 6px solid #F2C84B;
+    ;
+}
+
+div:where(.swal2-container) .swal2-html-container {
+
+    font-size: 1.7em !important;
+    margin-bottom: 25px !important;
+    font-weight: bold !important;
+}
+
+/* FIm MAIOR DE IDADE */
+
+.contatoN h4 {
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 1.3em;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+
+/* pagina sobre */
+
+.campoBuscar2 {
+    width: 100%;
+    background-color: black;
+    padding:215px 90px 100px;
+    background: url(./img/bannertaligado2.png);
+    display: flex;
+
+}
+
+.campoBuscar2 h1 {
+    display: flex;
+    justify-content: center;
+    color: #F2E852;
+    border: 3px solid #F2E852;
+    width: 42%;
+    border-radius: 5px;
+    padding: 5px 10px 5px 0px;
+    font-weight: bold;
+    height: 14%;
+    margin-right: 7%;
+    margin-left: 7%;
+    text-align: center;
+}
+
+.input1 input {
+    width: 260%;
+    padding: 11px;
+    border: 2px solid black;
+    border-radius: 10px;
+
+
+}
+
+
+
+
+.title h1 {
+    color: #fff243;
+    margin: 25px;
+    font-size: 2.2em;
+
+}
+
+.title p {
+    font-size: 1.4em;
+    margin: 0px 35px 40px 25px;
+
+}
+
+.proOUTRO {
+    display: flex;
+    justify-content: end;
+    margin-right: 17% !important;
+}
+
+.title1 h1 {
+    color: #fff243;
+    margin-bottom: 25px;
+    font-size: 2.2em;
+
+}
+
+.title1 p {
+    font-size: 1.7em;
+    margin: 0px 30px 55px 25px;
+
+}
+
+
+
+.title h2 {
+    margin: 25px;
+    font-size: 1.7em;
+    font-weight: bold;
+
+}
+
+.title1 h2 {
+    margin: 25px;
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
+.maiorde18  {
+    margin-top: 100px;
+
+}
+.maiorde18 h2 {
+    font-size: 1.8em;
+    margin-bottom: 40px !important;
+}
+.privacidades p{
+    margin-bottom: 90px !important;
+}
+
+
+
+/* fim pagina sobre */
+
+
+
+
+/* pagina produto*/
+
+.input2 input {
+    width: 380%;
+    padding: 13px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-left: 80%;
+}
+
+.campoBuscar3 {
+    width: 100%;
+    background-color: black;
+    padding: 70px 90px;
+    background: url(./img/bannertaligado2.png);
+    display: flex;
+    justify-content: space-between;
+}
+.carro img {
+    width: 68%;
+    margin-top: -6px;
+
+}
+.carro {
+    margin-right: 6%;
+   
+}
+
+.carro div {
+    display: flex;
+}
+.carro div h2 {
+    color: #ffffff;
+    font-size: 2.9em;
+    width: 52%;
+   
+} 
+.duplo {
+    display: flex;
+}
+
+aside {
+
+    background-color: #000000;
+    width: 17%;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 30px 0px;
+    justify-content: space-evenly;
+    align-items: center;
+    border-right: 5px solid #F2C84B;
+ 
+}
+
+
+
+aside a {
+
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff243;
+    font-size: 30px;
+    margin-bottom: 50px;
+
+}
+
+.menuAtivo {
+    color: #fff2c4;
+
+}
+.box{
+    font-size: 1.9em;
+    width: 100%; 
+
+}
+
+.cardEnergia {
+    width: 25%;
+    background: #ffffff;
+    padding: 30px;
+    transition: 0.3s ease;
+    text-align: center;
+    margin-right: 2%;
+    margin-left: 30px;
+}
+.cardEnergia:hover {
+    box-shadow: 0 0 10px #2c2b2b;
+}
+
+.fundoComprar1 {
+    background-color: #32ba46;
+    height: 30px !important;
+    margin-bottom: 16px;
+
+}
+.fundoComprar1:hover {
+    background-color: #60c46f;
+    font-size: 1.1em;
+
+}
+.fundoComprar1 a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.cardEnergia div {
+    width: 240px;
+    height: 250px;
+    /* background-color: white; */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+.promocoesEstrutura1 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4%;
+    margin-left: 8%;
+}
+
+.cardEnergia h4 {
+    margin: 15px;
+    color: black;
+}
+
+.cardEnergia h3 {
+    margin-top: 15px;
+    color: black;
+}
+.pagination {
+
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    justify-content: center;
+    margin-top: 4%;
+}
+.page-item a {
+    background: #000000;
+    padding: 10px 20px;
+    color: #F2C84B;
+    font-size: .6em;
+}
+
+.page-item a:hover {
+    color: #000000;
+    background: #F2C84B;
+    transition: 0.5s ease;
+   
+
+}
+.card {
+    background: white;
+    display: flex !important;
+    justify-content: space-around !important;
+    margin: 0 auto;
+    width: 40%;
+    align-items: center;
+    border-radius: 10px;
+  
+}
+
+
+.linkdosProdutos  {
+    text-decoration: none !important;
+    color: black;
+    font-weight: bold;
+}
+
+.fotoLogin img{
+ 
+    width: 100%;
+}
+.form-control {
+
+    width: 80%;
+}
+.formulario{
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.fundo {
+    background: #000000;
+    padding: 66px 0px 91px 0px;;
+}
+form {
+    background: url(./img/fundoform.png);
+    padding: 25px 25px 70px 25px;
+}
+
+.fundo img {
+    width: 30%;
+    border: 5px solid #F2C84B;
+    border-radius: 217px;
+    padding: 40px;
+}
+.imglogoForm{
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.mb-5 {
+    margin-bottom: 1.5rem!important;
+    margin-left: 125px;
+}
+.btnlogin {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.btnlogin button {
+    width: 20%;
+    padding: 10px;
+    background: #F2C84B !important;
+    border: none !important;
+    font-size: 1.5em;
+}
+
+.btnlogin button:hover {
+    background: #ffe79f !important;
+    color: #000000;
+    transition: 0.5s ease;
+    
+} 
+.sair {
+    border: 3px solid;
+    padding: 0px 9px;
+    border-radius: 40px;
+} 
+
+form a {
+   color: #000000;
+}
+
+
