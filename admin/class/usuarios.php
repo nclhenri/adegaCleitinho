@@ -13,6 +13,43 @@ class UsuarioClass
     public $cepUsuario;
     public $statusUsuario;
 
+    public function __construct($id = false)
+    {
+        if ($id) {
+            $this->idUsuario = $id;
+            $this->Carregar();
+        }
+        
+    }
+
+    public function Carregar()
+    {
+        $query = "SELECT * FROM usuarios WHERE idUsuario " . $this->idUsuario;
+
+        $connect = Conexao::LigarConexao();
+        $resultado = $connect->query($query);
+        $lista = $resultado->fetchAll();
+
+        foreach ($lista as $linha) {
+            $this->nomeUsuario = $linha["nomeUsuario"];
+            $this->emailUsuario = $linha["emailUsuario"];
+            $this->senhaUsuario = $linha["senhaUsuario"];
+            $this->dataNascUsuario = $linha["dataNascUsuario"];
+            $this->telefoneUsuario = $linha["telefoneUsuario"];
+            $this->enderecoUsuario = $linha["enderecoUsuario"];
+            $this->cepUsuario = $linha["cepUsuario"];
+            $this->statusUsuario = $linha["statusUsuario"];
+        }
+    }
+
+    public function Atualizar()
+    {
+        $sql = "UPDATE usuarios SET nomeUsuario = '".$this->nomeUsuario."', emailUsuario '".$this->emailUsuario."', '".$this->senhaUsuario."', '".$this->dataNascUsuario."', '".$this->telefoneUsuario."', '".$this->telefoneUsuario."', '".$this->enderecoUsuario."', '".$this->cepUsuario."', '".$this->statusUsuario."'";
+
+        $connect = Conexao::LigarConexao();
+        $connect->exec($sql);
+    }
+
     public function Inserir()
     {
         $sql = "INSERT INTO usuarios(nomeUsuario, emailUsuario, senhaUsuario, dataNascUsuario, telefoneUsuario, enderecoUsuario, cepUsuario, statusUsuario) VALUES ('" . $this->nomeUsuario . "','" . $this->emailUsuario . "','" . $this->senhaUsuario . "','" . $this->dataNascUsuario . "','" . $this->telefoneUsuario . "','" . $this->enderecoUsuario . "','" . $this->cepUsuario . "','" . $this->statusUsuario . "')";
