@@ -12,6 +12,40 @@ class ProdutoClass
     public $statusProduto;
     public $idFornecedor;
 
+    public function __construct($id = false)
+    {
+        if ($id) {
+            $this->idProduto = $id;
+            $this->Carregar();
+        }
+    }
+
+    public function Carregar()
+    {
+        $query = "SELECT * FROM produto WHERE idProduto=" .$this->idProduto;
+
+        $connect = Conexao::LigarConexao();
+        $resultado = $connect->query($query);
+        $lista = $resultado->fetchAll();
+
+        foreach ($lista as $linha) {
+            $this->marcaProduto = $linha["marcaProduto"];
+            $this->nomeProduto = $linha["nomeProduto"];
+            $this->validadeProduto = $linha["validadeProduto"];
+            $this->alcoolicoProduto = $linha["alcoolicoProduto"];
+            $this->quantidadeProduto = $linha["quantidadeProduto"];
+            $this->statusProduto = $linha["statusProduto"];
+        }
+    }
+
+    public function Atualizar()
+    {
+        $sql = "UPDATE produto SET marcaProduto = '".$this->marcaProduto."', nomeProduto '".$this->nomeProduto."', '".$this->validadeProduto."', '".$this->alcoolicoProduto."', '".$this->quantidadeProduto."', '".$this->statusProduto."', '".$this->idFornecedor."'"; 
+
+        $connect = Conexao::LigarConexao();
+        $connect->exec($sql);
+    }
+
     public function Inserir()
     {
         $sql = "INSERT INTO produto(marcaProduto, nomeProduto, validadeProduto, alcoolicoProduto, quantidadeProduto, statusProduto, idFornecedor) VALUES ('" . $this->marcaProduto . "','" . $this->nomeProduto . "','" . $this->validadeProduto . "','" . $this->alcoolicoProduto . "','" . $this->quantidadeProduto . "','" . $this->statusProduto . "','". $this->idFornecedor ."')";
