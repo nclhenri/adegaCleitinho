@@ -12,7 +12,6 @@ $lista = $contato->ListarContato();
  
 <div class="ajusteTabela site">
     <table class="table table-bordered border-primary">
-        <caption>Lista de e-mail</caption>
         <thead>
             <tr>
                 <th>Id </th>

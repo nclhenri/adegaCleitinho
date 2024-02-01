@@ -120,7 +120,7 @@ header {
 .campoBuscar {
     width: 100%;
     background-color: black;
-    padding: 190px 245px 130px;
+    padding:190px 230px 300px;
     background: url(./img/bannertaligado2.png);
 }
 
@@ -849,7 +849,8 @@ aside a {
     display: flex;
     justify-content: space-between;
     margin-top: 4%;
-    margin-left: 8%;
+    margin-left: 6%;
+    position: absolute;
 }
 
 .cardEnergia h4 {

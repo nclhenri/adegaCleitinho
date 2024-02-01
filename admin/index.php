@@ -94,13 +94,13 @@ $paginaAtual = @$_GET['p'];
                     require_once('produtos/listar.php');
                     break;
                 case 'funcionarios':
-                    echo 'Funcionários';
+                    require_once('funcionarios/lista.php');
                     break;
                 case 'clientes':
                     require_once('usuarios/usuario.php');
                     break;
                 case 'fornecedores':
-                    echo 'Fornecedores';
+                    require_once('fornecedor/fornecedores.php');
                     break;
                 case 'compras':
                     echo 'Compras';
