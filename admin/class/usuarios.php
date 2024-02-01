@@ -19,12 +19,13 @@ class UsuarioClass
             $this->idUsuario = $id;
             $this->Carregar();
         }
+
         
     }
 
     public function Carregar()
     {
-        $query = "SELECT * FROM usuarios WHERE idUsuario " . $this->idUsuario;
+        $query = "SELECT * FROM usuarios WHERE idUsuario =" . $this->idUsuario;
 
         $connect = Conexao::LigarConexao();
         $resultado = $connect->query($query);
