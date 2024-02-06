@@ -94,7 +94,7 @@ $paginaAtual = @$_GET['p'];
                     require_once('produtos/produto.php');
                     break;
                 case 'funcionarios':
-                    require_once('funcionarios/lista.php');
+                    require_once('funcionarios/funcionario.php');
                     break;
                 case 'clientes':
                     require_once('usuarios/usuario.php');

@@ -73,6 +73,13 @@
 
     }
 
+    public function Desativar()
+    {
+        $sql = "UPDATE funcionarios SET statusFuncionario = 'DESATIVADO' WHERE idFuncionario = $this->idFuncionario";
+        $connect = Conexao::LigarConexao();
+        $connect->exec($sql);
+        echo"<script> document.location = 'index.php?p=funcionarios'; </script>";
+    }
 
 
     }
