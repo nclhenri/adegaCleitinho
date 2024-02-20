@@ -16,34 +16,32 @@
 </head>
 
 <body>
-    <form action="" method="post">
-        <a href="home.php"><svg class="sair" xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z" />
-                <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z" />
-            </svg></a>
+    <div class ="fotofundo">
+        <form action="" method="post">
+            <a href="home.php"><svg class="sair" xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z" />
+                    <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z" />
+                </svg></a>
 
-        <div class="formulario">
-            <div class="fundo">
-                <div class="imglogoForm">
-                    <img src="img/user.png" alt="">
-                </div>
-                <div class="form-floating mb-5">
-                    <input type="email" class="form-control" name="emailLogin" id="emaillogin" placeholder="name@example.com" required>
-                    <label for="floatingInput">Email :</label>
-                </div>
-                <div class="form-floating mb-5">
-                    <input type="password" class="form-control" name="senhaLogin" id="senhaLogin" placeholder="Password" required>
-                    <label for="floatingPassword">Senha :</label>
-                </div>
-                <div class="btnlogin">
-                    <button type="submit" name="submit" id="submit" class="btn btn-primary">Login</button>
+            <div class="formulario">
+                <div class="fundo">
+                    <div class="imglogoForm">
+                        <img src="img/user.png" alt="">
+                    </div>
+                    <div class="form-floating mb-5">
+                        <input type="email" class="form-control" name="emailLogin" id="emaillogin" placeholder="name@example.com" required>
+                        <label for="floatingInput">Email :</label>
+                    </div>
+                    <div class="form-floating mb-5">
+                        <input type="password" class="form-control" name="senhaLogin" id="senhaLogin" placeholder="Password" required>
+                        <label for="floatingPassword">Senha :</label>
+                    </div>
+                    <div class="btnlogin">
+                        <button type="submit" name="submit" id="submit" class="btn btn-primary">Login</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </form>
-
-
-
+        </form>
     </div>
 
 

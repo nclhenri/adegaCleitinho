@@ -72,5 +72,6 @@ class ProdutoClass
         $connect->exec($sql);
         echo"<script> document.location = 'index.php?p=produtos'; </script>";
     }
+
 }
 ?>

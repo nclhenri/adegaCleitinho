@@ -84,3 +84,70 @@ main h1{
 .ajusteTabela th{
     color: #F2C84B !important;
 }
+
+
+.cardi {
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 20px;
+    
+}
+.row img {
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    width: 85%;
+    margin-left: 20px;
+  }
+  .cardi-title {
+    background-color: #F2C84B;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px 10px 0px 0px;
+    margin: 0 !important;
+  }
+  .form-select {
+    width: 172% !important;
+  }
+  
+  .form-dash .row {
+    margin-bottom: 3%;
+    align-items: baseline;
+  }
+  
+  .form-dash textarea {
+    height: 150px;
+    resize: none;
+  }
+
+  .form-group label {
+    color: #ffffff !important;
+  } 
+  
+  .cardi-body {
+    padding: 30px;
+    border:5px double #F2C84B;
+    margin-bottom: 45px;
+  }
+  
+ 
+  .btn-primary {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: none !important;
+    padding: 15px !important;
+    justify-content: center !important;
+    display: flex;
+    margin-right: 28%;
+    margin-top: 40px;
+    font-weight: bold;
+  }
+
+  .btn-primary:hover{
+    background-color: #F2C84B !important;
+    color: #ffffff !important;
+    transform: scale(1.1);
+  }
+
+  
