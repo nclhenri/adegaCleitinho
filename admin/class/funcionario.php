@@ -1,24 +1,67 @@
-<?php 
+<?php
 
-    require_once('conexao.php'); 
+require_once('conexao.php');
 
-    class funcionarioClass {
+class funcionarioClass
+{
 
-        public $idFuncionario;
-        public $nomeFuncionario;
-        public $dataNascFuncionario;
-        public $cargoFuncionario;
-        public $emailFuncionario;
-        public $senhaFuncionario;
-        public $nivelFuncionario;
-        public $telefoneFuncionario;
-        public $fotoFuncionario;
-        public $statusFuncionario;
+    public $idFuncionario;
+    public $nomeFuncionario;
+    public $dataNascFuncionario;
+    public $cargoFuncionario;
+    public $emailFuncionario;
+    public $senhaFuncionario;
+    public $nivelFuncionario;
+    public $telefoneFuncionario;
+    public $admissaoFuncionario;
+    public $fotoFuncionario;
+    public $statusFuncionario;
 
-        
-        public function Inserir (){
+    public function __construct($id = false)
+    {
+        if ($id) {
+            $this->idFuncionario = $id;
+            $this->Carregar();
+        }
+    }
 
-            $sql = "      INSERT INTO fornecedores ( nomeFuncionario ,
+    public function Carregar()
+    {
+        $query = "SELECT * FROM funcionarios WHERE idFuncionario=" .$this->idFuncionario;
+
+        $connect = Conexao::LigarConexao();
+        $resultado = $connect->query($query);
+        $lista = $resultado->fetchAll();
+
+        foreach ($lista as $linha) {
+            $this->nomeFuncionario = $linha["nomeFuncionario"];
+            $this->dataNascFuncionario = $linha["dataNascFuncionario"];
+            $this->cargoFuncionario = $linha["cargoFuncionario"];
+            $this->emailFuncionario = $linha["emailFuncionario"];
+            $this->senhaFuncionario = $linha["senhaFuncionario"];
+            $this->nivelFuncionario = $linha["nivelFuncionario"];
+            $this->telefoneFuncionario = $linha["telefoneFuncionario"];
+            $this->admissaoFuncionario = $linha["admissaoFuncionaro"];
+            $this->fotoFuncionario = $linha["fotoFuncionario"];
+            $this->statusFuncionario = $linha["statusFuncionario"];
+        }
+    }
+
+    public function Atualizar()
+    {
+        $sql = "UPDATE funcionarios SET nomeFuncionario = '".$this->nomeFuncionario."', dataNascFuncionario = '".$this->dataNascFuncionario."', cargoFuncionario = '".$this->cargoFuncionario."', emailFuncionario = '".$this->emailFuncionario."', senhaFuncionario = '".$this->senhaFuncionario."', nivelFuncionario = '".$this->nivelFuncionario."', telefoneFuncionario = '".$this->telefoneFuncionario."', admissaoFuncionaro = '".$this->admissaoFuncionario."', fotoFuncionario = '".$this->fotoFuncionario."', statusFuncionario = '".$this->statusFuncionario."' WHERE idFuncionario = ".$this->idFuncionario;
+
+        $connect = Conexao::LigarConexao();
+        $connect->exec($sql);
+
+        echo "<script>document.location='index.php?p=funcionarios'</script>";
+    }
+
+
+    public function Inserir()
+    {
+
+        $sql = "      INSERT INTO fornecedores ( nomeFuncionario ,
 
                                                     dataNascFuncionario,
 
@@ -38,39 +81,38 @@
   
   
                             VALUES
-                                            ('".$this->nomeFuncionario ."',
+                                            ('" . $this->nomeFuncionario . "',
 
-                                             '".$this->dataNascFuncionario."',
+                                             '" . $this->dataNascFuncionario . "',
 
-                                             '".$this->cargoFuncionario."',
+                                             '" . $this->cargoFuncionario . "',
 
-                                             '".$this->emailFuncionario."',
+                                             '" . $this->emailFuncionario . "',
 
-                                             '".$this->senhaFuncionario."',
+                                             '" . $this->senhaFuncionario . "',
 
-                                            '".$this->nivelFuncionario ."',
+                                            '" . $this->nivelFuncionario . "',
 
-                                            '".$this->telefoneFuncionario ."',
+                                            '" . $this->telefoneFuncionario . "',
                                             
-                                            '".$this->fotoFuncionario ."',
+                                            '" . $this->fotoFuncionario . "',
 
-                                            '".$this->statusFuncionario ."',)";
+                                            '" . $this->statusFuncionario . "',)";
 
-    $conn = conexao::Ligarconexao();
+        $conn = conexao::Ligarconexao();
 
-    $conn->exec($sql);
-
+        $conn->exec($sql);
     }
-    
-    
-    public function ListarFuncionario() {
-         
+
+
+    public function ListarFuncionario()
+    {
+
         $sql = "SELECT * FROM funcionarios WHERE statusFuncionario = 'ATIVO';";
         $connect = conexao::Ligarconexao();
-        $resultado = $connect -> query($sql);
-        $lista = $resultado -> fetchAll();
+        $resultado = $connect->query($sql);
+        $lista = $resultado->fetchAll();
         return $lista;
-
     }
 
     public function Desativar()
@@ -78,8 +120,6 @@
         $sql = "UPDATE funcionarios SET statusFuncionario = 'DESATIVADO' WHERE idFuncionario = $this->idFuncionario";
         $connect = Conexao::LigarConexao();
         $connect->exec($sql);
-        echo"<script> document.location = 'index.php?p=funcionarios'; </script>";
+        echo "<script> document.location = 'index.php?p=funcionarios'; </script>";
     }
-
-
-    }
+}

@@ -5,3 +5,4 @@ $id = $_GET['id'];
 $funcionario = new funcionarioClass();
 $funcionario-> idFuncionario = $id;
 $funcionario-> Desativar();
+?>

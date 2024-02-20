@@ -10,7 +10,6 @@ class ProdutoClass
     public $alcoolicoProduto;
     public $quantidadeProduto;
     public $statusProduto;
-    public $idFornecedor;
 
     public function __construct($id = false)
     {
@@ -35,20 +34,25 @@ class ProdutoClass
             $this->alcoolicoProduto = $linha["alcoolicoProduto"];
             $this->quantidadeProduto = $linha["quantidadeProduto"];
             $this->statusProduto = $linha["statusProduto"];
+            
         }
     }
 
     public function Atualizar()
     {
-        $sql = "UPDATE produto SET marcaProduto = '".$this->marcaProduto."', nomeProduto '".$this->nomeProduto."', '".$this->validadeProduto."', '".$this->alcoolicoProduto."', '".$this->quantidadeProduto."', '".$this->statusProduto."', '".$this->idFornecedor."'"; 
+        // var_dump($this->idProduto);
+        $sql = "UPDATE produto SET marcaProduto = '".$this->marcaProduto."',nomeProduto='".$this->nomeProduto."' , validadeProduto='".$this->validadeProduto."',alcoolicoProduto='".$this->alcoolicoProduto."',quantidadeProduto='".$this->quantidadeProduto."',statusProduto='".$this->statusProduto."' WHERE idProduto='".$this->idProduto."'"; 
 
         $connect = Conexao::LigarConexao();
         $connect->exec($sql);
+
+
+        echo "<script>document.location='index.php?p=produtos'</script>";
     }
 
     public function Inserir()
     {
-        $sql = "INSERT INTO produto(marcaProduto, nomeProduto, validadeProduto, alcoolicoProduto, quantidadeProduto, statusProduto, idFornecedor) VALUES ('" . $this->marcaProduto . "','" . $this->nomeProduto . "','" . $this->validadeProduto . "','" . $this->alcoolicoProduto . "','" . $this->quantidadeProduto . "','" . $this->statusProduto . "','". $this->idFornecedor ."')";
+        $sql = "INSERT INTO produto(marcaProduto, nomeProduto, validadeProduto, alcoolicoProduto, quantidadeProduto, statusProduto) VALUES ('" . $this->marcaProduto . "','" . $this->nomeProduto . "','" . $this->validadeProduto . "','" . $this->alcoolicoProduto . "','" . $this->quantidadeProduto . "','" . $this->statusProduto . "')";
 
         $connect = Conexao::LigarConexao();
         $connect->exec($sql);
