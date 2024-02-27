@@ -56,7 +56,6 @@
 
     
     public function ListarFornecedor() {
-         
         $sql = "SELECT * FROM fornecedores WHERE statusFornecedor = 'ATIVO'";
         $connect = conexao::Ligarconexao();
         $resultado = $connect -> query($sql);
@@ -71,6 +70,41 @@
         $connect->exec($sql);
         echo"<script> document.location = 'index.php?p=fornecedores'; </script>";
     }
+
+    public function Atualizar(){
+        $sql = "UPDATE fornecedores SET nomeFornecedor = '".$this->nomeFornecedor."', telefoneFornecedor = '".$this->telefoneFornecedor."', enderecoFornecedor = '".$this->enderecoFornecedor."', cepFornecedor = '".$this->cepFornecedor."', cnpjFornecedor = '".$this->cnpjFornecedor."', statusFornecedor = '".$this->statusFornecedor."' WHERE idFonecedor = '".$this->idFonecedor."' ";
+        $connect = Conexao::LigarConexao();
+        $connect->exec($sql);
+
+        echo "<script>document.location='index.php?p=fornecedores'</script>";
+    }
+
+    public function __construct($id = false)
+    {
+        if ($id) {
+            $this->idFonecedor = $id;
+            $this->Carregar();
+        }
+    }
+
+    public function Carregar(){
+        $query = "SELECT * FROM fornecedores WHERE idFonecedor = ".$this->idFonecedor;
+
+        $connect = Conexao::LigarConexao();
+        $resultado = $connect->query($query);
+        $lista = $resultado->fetchAll();
+
+        foreach ($lista as $linha){
+            $this -> nomeFornecedor = $linha["nomeFornecedor"];
+            $this -> telefoneFornecedor = $linha["telefoneFornecedor"];
+            $this -> enderecoFornecedor = $linha["enderecoFornecedor"];
+            $this -> cepFornecedor = $linha["cepFornecedor"];
+            $this -> cnpjFornecedor = $linha["cnpjFornecedor"];
+            $this -> statusFornecedor = $linha["statusFornecedor"];
+
+        }
+    }
+
 
     
 }
