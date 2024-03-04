@@ -49,7 +49,7 @@ class funcionarioClass
 
     public function Atualizar()
     {
-        $sql = "UPDATE funcionarios SET nomeFuncionario = '".$this->nomeFuncionario."', dataNascFuncionario = '".$this->dataNascFuncionario."', cargoFuncionario = '".$this->cargoFuncionario."', emailFuncionario = '".$this->emailFuncionario."', senhaFuncionario = '".$this->senhaFuncionario."', nivelFuncionario = '".$this->nivelFuncionario."', telefoneFuncionario = '".$this->telefoneFuncionario."', admissaoFuncionaro = '".$this->admissaoFuncionaro."', fotoFuncionario = '".$this->fotoFuncionario."', statusFuncionario = '".$this->statusFuncionario."' WHERE idFuncionario = ".$this->idFuncionario;
+        $sql = "UPDATE funcionarios SET nomeFuncionario = '".$this->nomeFuncionario."', dataNascFuncionario = '".$this->dataNascFuncionario."', cargoFuncionario = '".$this->cargoFuncionario."', emailFuncionario = '".$this->emailFuncionario."', senhaFuncionario = '".$this->senhaFuncionario."', nivelFuncionario = '".$this->nivelFuncionario."', telefoneFuncionario = '".$this->telefoneFuncionario."', admissaoFuncionaro = '".$this->admissaoFuncionaro."', fotoFuncionario = '".$this->fotoFuncionario."', statusFuncionario = '".$this->statusFuncionario."', fotoFuncionario = '".$this->fotoFuncionario."' WHERE idFuncionario = ".$this->idFuncionario;
 
         $connect = Conexao::LigarConexao();
         $connect->exec($sql);

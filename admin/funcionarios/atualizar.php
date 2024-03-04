@@ -1,10 +1,10 @@
-<?php 
+<?php
 $id = $_GET["id"];
 require_once('class/funcionario.php');
 $funcionario = new funcionarioClass($id);
 
 if (isset($_POST['nomeFuncionario'])) {
-    
+
     $nomeFuncionario = $_POST['nomeFuncionario'];
     $dataNascFuncionario = $_POST['dataNascFuncionario'];
     $cargoFuncionario = $_POST['cargoFuncionario'];
@@ -13,8 +13,21 @@ if (isset($_POST['nomeFuncionario'])) {
     $nivelFuncionario = $_POST['nivelFuncionario'];
     $telefoneFuncionario = $_POST['telefoneFuncionario'];
     $admissaoFuncionaro = $_POST['admissaoFuncionaro'];
-    $fotoFuncionario = $_POST['fotoFuncionario'];
     $statusFuncionario = $_POST['statusFuncionario'];
+    $arquivo = $_FILES['fotoFuncionario'];
+
+    if ($arquivo['error']) {
+        throw new Exception("o error foi: ", $arquivo['error']);
+    }
+
+    if (move_uploaded_file($arquivo['tmp_name'], '../img/funcionario/' . $arquivo['name'])) {
+        $fotoFuncionario = 'funcionario/' . $arquivo['name']; // exercicio/corrida.png
+
+    } else {
+        throw new Exception("o error foi: ", $arquivo['error']);
+    }
+
+
 
     require_once('class/funcionario.php');
 
@@ -45,6 +58,10 @@ if (isset($_POST['nomeFuncionario'])) {
 
     <div>
 
+        <div class="mb-3">
+            <label for="formFile" class="form-label">Foto:</label>
+            <input class="form-control" type="file" name="fotoFuncionario" id="fotoFuncionario">
+        </div>
 
 
         <div class="mb-3">
@@ -85,13 +102,9 @@ if (isset($_POST['nomeFuncionario'])) {
 
         <div class="mb-3">
             <label for="admissaoFuncionaro" class="form-label">Data de Admissão:</label>
-            <input type="text" class="form-control" name="admissaoFuncionaro" id="admissaoFuncionaro"  placeholder="Formato: (ano-mês-dia)" value="<?php echo $funcionario->admissaoFuncionaro ?>">
+            <input type="text" class="form-control" name="admissaoFuncionaro" id="admissaoFuncionaro" placeholder="Formato: (ano-mês-dia)" value="<?php echo $funcionario->admissaoFuncionaro ?>">
         </div>
 
-        <div class="mb-3">
-            <label for="fotoFuncionario" class="form-label">Foto:</label>
-            <input type="text" class="form-control" name="fotoFuncionario" id="fotoFuncionario" value="<?php echo $funcionario->fotoFuncionario ?>">
-        </div>
 
         <div class="mb-3">
             <label for="statusFuncionario" class="form-label">Status:</label>
