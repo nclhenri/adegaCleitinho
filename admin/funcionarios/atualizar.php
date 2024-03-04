@@ -12,7 +12,7 @@ if (isset($_POST['nomeFuncionario'])) {
     $senhaFuncionario = $_POST['senhaFuncionario'];
     $nivelFuncionario = $_POST['nivelFuncionario'];
     $telefoneFuncionario = $_POST['telefoneFuncionario'];
-    $admissaoFuncionario = $_POST['admissaoFuncionario'];
+    $admissaoFuncionaro = $_POST['admissaoFuncionaro'];
     $fotoFuncionario = $_POST['fotoFuncionario'];
     $statusFuncionario = $_POST['statusFuncionario'];
 
@@ -25,7 +25,7 @@ if (isset($_POST['nomeFuncionario'])) {
     $funcionario->senhaFuncionario = $senhaFuncionario;
     $funcionario->nivelFuncionario = $nivelFuncionario;
     $funcionario->telefoneFuncionario = $telefoneFuncionario;
-    $funcionario->admissaoFuncionario = $admissaoFuncionario;
+    $funcionario->admissaoFuncionaro = $admissaoFuncionaro;
     $funcionario->fotoFuncionario = $fotoFuncionario;
     $funcionario->statusFuncionario = $statusFuncionario;
 
@@ -84,8 +84,8 @@ if (isset($_POST['nomeFuncionario'])) {
         </div>
 
         <div class="mb-3">
-            <label for="admissaoFuncionario" class="form-label">Data de Admissão:</label>
-            <input type="text" class="form-control" name="admissaoFuncionario" id="admissaoFuncionario"  placeholder="Formato: (ano-mês-dia)" value="<?php echo $funcionario->admissaoFuncionario ?>">
+            <label for="admissaoFuncionaro" class="form-label">Data de Admissão:</label>
+            <input type="text" class="form-control" name="admissaoFuncionaro" id="admissaoFuncionaro"  placeholder="Formato: (ano-mês-dia)" value="<?php echo $funcionario->admissaoFuncionaro ?>">
         </div>
 
         <div class="mb-3">

@@ -13,7 +13,7 @@ class funcionarioClass
     public $senhaFuncionario;
     public $nivelFuncionario;
     public $telefoneFuncionario;
-    public $admissaoFuncionario;
+    public $admissaoFuncionaro;
     public $fotoFuncionario;
     public $statusFuncionario;
 
@@ -41,7 +41,7 @@ class funcionarioClass
             $this->senhaFuncionario = $linha["senhaFuncionario"];
             $this->nivelFuncionario = $linha["nivelFuncionario"];
             $this->telefoneFuncionario = $linha["telefoneFuncionario"];
-            $this->admissaoFuncionario = $linha["admissaoFuncionaro"];
+            $this->admissaoFuncionaro = $linha["admissaoFuncionaro"];
             $this->fotoFuncionario = $linha["fotoFuncionario"];
             $this->statusFuncionario = $linha["statusFuncionario"];
         }
@@ -49,7 +49,7 @@ class funcionarioClass
 
     public function Atualizar()
     {
-        $sql = "UPDATE funcionarios SET nomeFuncionario = '".$this->nomeFuncionario."', dataNascFuncionario = '".$this->dataNascFuncionario."', cargoFuncionario = '".$this->cargoFuncionario."', emailFuncionario = '".$this->emailFuncionario."', senhaFuncionario = '".$this->senhaFuncionario."', nivelFuncionario = '".$this->nivelFuncionario."', telefoneFuncionario = '".$this->telefoneFuncionario."', admissaoFuncionaro = '".$this->admissaoFuncionario."', fotoFuncionario = '".$this->fotoFuncionario."', statusFuncionario = '".$this->statusFuncionario."' WHERE idFuncionario = ".$this->idFuncionario;
+        $sql = "UPDATE funcionarios SET nomeFuncionario = '".$this->nomeFuncionario."', dataNascFuncionario = '".$this->dataNascFuncionario."', cargoFuncionario = '".$this->cargoFuncionario."', emailFuncionario = '".$this->emailFuncionario."', senhaFuncionario = '".$this->senhaFuncionario."', nivelFuncionario = '".$this->nivelFuncionario."', telefoneFuncionario = '".$this->telefoneFuncionario."', admissaoFuncionaro = '".$this->admissaoFuncionaro."', fotoFuncionario = '".$this->fotoFuncionario."', statusFuncionario = '".$this->statusFuncionario."' WHERE idFuncionario = ".$this->idFuncionario;
 
         $connect = Conexao::LigarConexao();
         $connect->exec($sql);
@@ -61,7 +61,7 @@ class funcionarioClass
     public function Inserir()
     {
 
-        $sql = "      INSERT INTO fornecedores ( nomeFuncionario ,
+        $sql = "      INSERT INTO funcionarios ( nomeFuncionario ,
 
                                                     dataNascFuncionario,
 
@@ -121,5 +121,15 @@ class funcionarioClass
         $connect = Conexao::LigarConexao();
         $connect->exec($sql);
         echo "<script> document.location = 'index.php?p=funcionarios'; </script>";
+    }
+
+    public function Cadastrar()
+    {
+        $sql = "INSERT INTO funcionarios (nomeFuncionario, dataNascFuncionario, cargoFuncionario, emailFuncionario, senhaFuncionario, nivelFuncionario, telefoneFuncionario, admissaoFuncionaro, fotoFuncionario, statusFuncionario) VALUES ('".$this->nomeFuncionario."','".$this->dataNascFuncionario."', '".$this->cargoFuncionario."', '".$this->emailFuncionario."', '".$this->senhaFuncionario."', '".$this->nivelFuncionario."', '".$this->telefoneFuncionario."', '".$this->admissaoFuncionaro."', '".$this->fotoFuncionario."', '".$this->statusFuncionario."')";
+
+        $connect = Conexao::LigarConexao();
+        $connect->exec($sql);
+
+        echo "<script>document.location='index.php?p=funcionarios'</script>";
     }
 }
