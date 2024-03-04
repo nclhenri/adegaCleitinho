@@ -10,6 +10,7 @@ class ProdutoClass
     public $alcoolicoProduto;
     public $quantidadeProduto;
     public $statusProduto;
+    public $idFonecedor;
 
     public function __construct($id = false)
     {
@@ -77,5 +78,13 @@ class ProdutoClass
         echo"<script> document.location = 'index.php?p=produtos'; </script>";
     }
 
+    public function Cadastrar(){
+        $sql = "INSERT INTO `produto`(`marcaProduto`, `nomeProduto`, `validadeProduto`, `alcoolicoProduto`, `quantidadeProduto`, `statusProduto`, `idFonecedor`) VALUES ('".$this->marcaProduto."','".$this->nomeProduto."','".$this->validadeProduto."','".$this->alcoolicoProduto."','".$this->quantidadeProduto."','".$this->statusProduto."','".$this->idFonecedor."')";
+
+        $connect = Conexao::LigarConexao();
+        $connect->exec($sql);
+        
+        echo "<script>document.location='index.php?p=produtos'</script>";
+    }
 }
 ?>

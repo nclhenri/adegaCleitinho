@@ -101,6 +101,7 @@
             $this -> cepFornecedor = $linha["cepFornecedor"];
             $this -> cnpjFornecedor = $linha["cnpjFornecedor"];
             $this -> statusFornecedor = $linha["statusFornecedor"];
+            $this -> idFonecedor = $linha["idFonecedor"];
 
         }
     }
