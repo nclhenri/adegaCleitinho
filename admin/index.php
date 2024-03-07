@@ -32,7 +32,6 @@ $paginaAtual = @$_GET['p'];
                         <li><a href="index.php?p=funcionarios" class="<?php echo ($paginaAtual == 'funcionarios') ? 'menuAtivo' : '' ?>">Funcionários</a></li>
                         <li><a href="index.php?p=clientes" class="<?php echo ($paginaAtual == 'clientes') ? 'menuAtivo' : '' ?>">Clientes</a></li>
                         <li><a href="index.php?p=fornecedores" class="<?php echo ($paginaAtual == 'fornecedores') ? 'menuAtivo' : '' ?>">Fornecedores</a></li>
-                        <li><a href="index.php?p=compras" class="<?php echo ($paginaAtual == 'compras') ? 'menuAtivo' : '' ?>">Compras</a></li>
                         <li><a href="index.php?p=email" class="<?php echo ($paginaAtual == 'email') ? 'menuAtivo' : '' ?>">E-mail</a></li>
                         <li><a href="index.php?p=ajuda" class="<?php echo ($paginaAtual == 'ajuda') ? 'menuAtivo' : '' ?>">Ajuda & Suporte</a></li>
                     </ul>
@@ -70,9 +69,6 @@ $paginaAtual = @$_GET['p'];
                 case 'fornecedores':
                     echo 'Fornecedores';
                     break;
-                case 'compras':
-                    echo 'Compras';
-                    break;
                 case 'email':
                     echo 'E-mail';
                     break;
@@ -101,9 +97,6 @@ $paginaAtual = @$_GET['p'];
                     break;
                 case 'fornecedores':
                     require_once('fornecedor/fornecedores.php');
-                    break;
-                case 'compras':
-                    echo 'Compras';
                     break;
                 case 'email':
                     require_once('contato/email.php');

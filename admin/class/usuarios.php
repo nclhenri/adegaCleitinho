@@ -76,4 +76,13 @@ class UsuarioClass
         $connect->exec($sql);
         echo"<script> document.location = 'index.php?p=clientes'; </script>";
     }
+
+    public function Cadastrar(){
+        $sql = "INSERT INTO usuarios(nomeUsuario, emailUsuario, senhaUsuario, dataNascUsuario, telefoneUsuario, enderecoUsuario, cepUsuario, statusUsuario) VALUES ('".$this->nomeUsuario."','".$this->emailUsuario."','".$this->senhaUsuario."','".$this->dataNascUsuario."','".$this->telefoneUsuario."','".$this->enderecoUsuario."','".$this->cepUsuario."','".$this->statusUsuario."')";
+
+        $connect = Conexao::LigarConexao();
+        $connect->exec($sql);
+
+        echo "<script>document.location='index.php?p=clientes'</script>";
+    }
 }
