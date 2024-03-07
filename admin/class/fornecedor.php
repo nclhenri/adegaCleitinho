@@ -106,6 +106,13 @@
         }
     }
 
+    public function Cadastrar()
+    {
+        $sql = "INSERT INTO fornecedores(nomeFornecedor, telefoneFornecedor, enderecoFornecedor, cepFornecedor, cnpjFornecedor, statusFornecedor) VALUES ('".$this->nomeFornecedor."','".$this->telefoneFornecedor."','".$this->enderecoFornecedor."','".$this->cepFornecedor."','".$this->cnpjFornecedor."','".$this->statusFornecedor."')";
 
-    
+        $connect = Conexao::LigarConexao();
+        $connect->exec($sql);
+
+        echo "<script>document.location='index.php?p=fornecedores'</script>";
+    }
 }
