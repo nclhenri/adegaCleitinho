@@ -13,11 +13,12 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsivo.css">
 
+
 </head>
 
 <body>
-    <div class ="fotofundo">
-        <form action="" method="post">
+    <div class="fotofundo">
+        <form action="" method="post" id="loginForm">
             <a href="home.php"><svg class="sair" xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z" />
                     <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z" />
@@ -29,7 +30,7 @@
                         <img src="img/user.png" alt="">
                     </div>
                     <div class="form-floating mb-5">
-                        <input type="email" class="form-control" name="emailLogin" id="emaillogin" placeholder="name@example.com" required>
+                        <input type="email" class="form-control" name="emailLogin" id="emailLogin" placeholder="name@example.com" required>
                         <label for="floatingInput">Email :</label>
                     </div>
                     <div class="form-floating mb-5">
@@ -37,11 +38,14 @@
                         <label for="floatingPassword">Senha :</label>
                     </div>
                     <div class="btnlogin">
-                        <button type="submit" name="submit" id="submit" class="btn btn-primary">Login</button>
+                        <button type="submit" class="btn btn-primary" onclick="carregarLogin()">Login</button>
                     </div>
                 </div>
             </div>
         </form>
+        <div id="msgLogin">
+
+        </div>
     </div>
 
 
@@ -54,10 +58,41 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="./js/slick.min.js"></script>
-    <script src="js/wow.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="./js/script.js"></script>
+    <script>
+        function carregarLogin() {
+
+            $('#loginForm').click(function() {
+
+                event.preventDefault();
+
+                var formData = $('#loginForm').serialize();
+                console.log(formData);
+                $.ajax({
+                    url: './admin/class/funcionario.php',
+                    method: 'POST',
+                    data: formData,
+                    dataType: 'json',
+                    success: function(data) {
+
+                        console.log(data);
+                        if (data.success) {
+                            console.log(data);
+                            $('#msgLogin').html('<div class = "msgSuccess">' + data.message + '</div>');
+                            var idFuncionario = data.idFuncionario;
+                            window.location.href = 'http://localhost/adega/admin/index.php?p=produtos';
+
+                        } else {
+                            $('#msgLogin').html('<div class = "msgInvalido">' + data.message + '</div>');
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        console.log(error);
+                    }
+                })
+            })
+        }
+    </script>
 </body>
 
 </html>

@@ -65,28 +65,28 @@ if (isset($_POST['nomeUsuario'])) {
                         <div class="form-group row">
                             <label for="dataNascUsuario" class="col-sm-2 col-form-label">Data de Nascimento:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="dataNascUsuario" name="dataNascUsuario" required placeholder="">
+                                <input type="text" class="form-control" id="dataNascUsuario" name="dataNascUsuario" required placeholder="Data de Nascimento:">
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label for="telefoneUsuario" class="col-sm-2 col-form-label">Telefone:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="telefoneUsuario" name="telefoneUsuario" required placeholder="">
+                                <input type="text" class="form-control" id="telefoneUsuario" name="telefoneUsuario" required placeholder="Telefone:">
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label for="enderecoUsuario" class="col-sm-2 col-form-label">Endereço:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="enderecoUsuario" name="enderecoUsuario" required placeholder="">
+                                <input type="text" class="form-control" id="enderecoUsuario" name="enderecoUsuario" required placeholder="Endereço:">
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label for="cepUsuario" class="col-sm-2 col-form-label">CEP:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="cepUsuario" name="cepUsuario" required placeholder="">
+                                <input type="text" class="form-control" id="cepUsuario" name="cepUsuario" required placeholder="CEP:">
                             </div>
                         </div>
 

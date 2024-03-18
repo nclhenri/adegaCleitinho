@@ -132,4 +132,38 @@ class funcionarioClass
 
         echo "<script>document.location='index.php?p=funcionarios'</script>";
     }
+
+    public function verificarLogin(){
+        
+        $sql = "SELECT * FROM funcionarios WHERE emailFuncionario = '".$this->emailFuncionario."' AND senhaFuncionario = '".$this->senhaFuncionario."'";
+
+        $connect = Conexao::LigarConexao();
+        $resultado = $connect->query($sql);
+        $funcionario = $resultado->fetch();
+        
+        if ($funcionario) {
+            return $funcionario['idFuncionario'];
+        }else{
+            return false;
+        }
+    }
+}
+
+if (isset($_POST['email'])) {
+    $funcionario = new funcionarioClass();
+
+    $emailLogin = $_POST['emailLogin'];
+    $senhaLogin = $_POST['senhaLogin'];
+
+    $funcionario->emailFuncionario = $emailLogin;
+    $funcionario->senhaFuncionario = $senhaLogin;
+
+    if ($idFuncionario = $funcionario->verificarLogin()) {
+        // var_dump($funcionario);
+        session_start();
+        $_SESSION['idFuncionario'] = $idFuncionario;
+        echo json_encode(['success' => true, 'message' => 'Login foi realizado com sucesso!', 'idFuncionario' => $idFuncionario]);
+    }else{
+        echo json_encode(['success' => false, 'message' => 'E-mail ou senha inválidos!']);
+    }
 }

@@ -47,7 +47,7 @@ if (isset($_POST['nomeFornecedor'])) {
                         <div class="form-group row">
                             <label for="telefoneFornecedor" class="col-sm-2 col-form-label">Telefone:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="telefoneFornecedor" name="telefoneFornecedor" required="" placeholder="">
+                                <input type="text" class="form-control" id="telefoneFornecedor" name="telefoneFornecedor" required="" placeholder="Telefone:">
                             </div>
                         </div>
 
@@ -55,21 +55,21 @@ if (isset($_POST['nomeFornecedor'])) {
                         <div class="form-group row">
                             <label for="enderecoFornecedor" class="col-sm-2 col-form-label">Endereço:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="enderecoFornecedor" name="enderecoFornecedor" required="" placeholder="">
+                                <input type="text" class="form-control" id="enderecoFornecedor" name="enderecoFornecedor" required="" placeholder="Endereço:">
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label for="cepFornecedor" class="col-sm-2 col-form-label">CEP:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="cepFornecedor" name="cepFornecedor" required="" placeholder="">
+                                <input type="text" class="form-control" id="cepFornecedor" name="cepFornecedor" required="" placeholder="CEP:">
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label for="cnpjFornecedor" class="col-sm-2 col-form-label">CNPJ:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="cnpjFornecedor" name="cnpjFornecedor" required="" placeholder="">
+                                <input type="text" class="form-control" id="cnpjFornecedor" name="cnpjFornecedor" required="" placeholder="CNPJ:">
                             </div>
                         </div>
 

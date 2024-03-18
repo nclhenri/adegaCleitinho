@@ -1,4 +1,6 @@
 
+
+
 $('.produtosCategorias').slick({
   dots: true,
   autoplay: true,
@@ -173,3 +175,4 @@ inputName.addEventListener('keypress', function (e) {
    }
 
 });
+
