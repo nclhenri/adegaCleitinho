@@ -1,5 +1,14 @@
 <?php
 $paginaAtual = @$_GET['p'];
+
+session_start();
+
+if (isset($_SESSION['idFuncionario'])) {
+    echo "!";
+} else {
+    header("Location:http://localhost/adega/");
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

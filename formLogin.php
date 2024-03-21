@@ -61,23 +61,24 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script>
         function carregarLogin() {
-
+      
             $('#loginForm').click(function() {
 
                 event.preventDefault();
 
                 var formData = $('#loginForm').serialize();
-                console.log(formData);
+                // console.log(formData);
                 $.ajax({
-                    url: './admin/class/funcionario.php',
+                    url: 'admin/class/funcionario.php',
                     method: 'POST',
                     data: formData,
                     dataType: 'json',
+
                     success: function(data) {
 
-                        console.log(data);
+                        //console.log(data);
                         if (data.success) {
-                            console.log(data);
+                            //console.log(data);
                             $('#msgLogin').html('<div class = "msgSuccess">' + data.message + '</div>');
                             var idFuncionario = data.idFuncionario;
                             window.location.href = 'http://localhost/adega/admin/index.php?p=produtos';

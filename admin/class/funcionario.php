@@ -149,7 +149,8 @@ class funcionarioClass
     }
 }
 
-if (isset($_POST['email'])) {
+if (isset($_POST['emailLogin'])) {
+
     $funcionario = new funcionarioClass();
 
     $emailLogin = $_POST['emailLogin'];
@@ -158,8 +159,9 @@ if (isset($_POST['email'])) {
     $funcionario->emailFuncionario = $emailLogin;
     $funcionario->senhaFuncionario = $senhaLogin;
 
+    
+
     if ($idFuncionario = $funcionario->verificarLogin()) {
-        // var_dump($funcionario);
         session_start();
         $_SESSION['idFuncionario'] = $idFuncionario;
         echo json_encode(['success' => true, 'message' => 'Login foi realizado com sucesso!', 'idFuncionario' => $idFuncionario]);
