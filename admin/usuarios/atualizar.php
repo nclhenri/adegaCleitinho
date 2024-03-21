@@ -41,7 +41,7 @@ if (isset($_POST['nomeUsuario'])) {
 
 
 
-    <div>
+    <div class="caixa">
         <div class="mb-3">
             <label for="nomeUsuario" class="form-label">Nome:</label>
             <input type="text" class="form-control" name="nomeUsuario" id="nomeUsuario" placeholder="Nome do usuário" value="<?php echo $usuario->nomeUsuario ?>">
@@ -84,7 +84,7 @@ if (isset($_POST['nomeUsuario'])) {
         </div>
 
         <div class="col-12">
-            <button type="submit" class="btn btn-primary">Atualizar Cliente</button>
+            <button type="submit" class="btn btn-primary" id="AtualizarBtn">Atualizar Cliente</button>
         </div>
     </div>
 

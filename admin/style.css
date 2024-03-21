@@ -1,174 +1,165 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Noto Sans', sans-serif;
-    list-style: none
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  list-style: none;
 }
 .site {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
-body{
-    background-color: black;
+body {
+  background-color: black;
 }
-.navegacao{
-    background-color: #F2C84B;
-    padding: 15px;
-    border-radius: 15px;
-    margin: 15px;
-    width: 65%;
-    margin-right: 12%;
-
-    
+.navegacao {
+  background-color: #f2c84b;
+  padding: 15px;
+  border-radius: 15px;
+  margin: 15px;
+  width: 65%;
+  margin-right: 12%;
 }
-.navegacao ul{
-    display: flex;
-    justify-content: space-between;
+.navegacao ul {
+  display: flex;
+  justify-content: space-between;
 }
-.navegacao ul li a{
-    font-family: 'Archivo', sans-serif;
-    font-size: 30px;
-    text-decoration: none;
-    color: black;
+.navegacao ul li a {
+  font-family: "Archivo", sans-serif;
+  font-size: 30px;
+  text-decoration: none;
+  color: black;
 }
-.navegacao ul li a:hover{
-    background: rgb(32, 32, 32);
-    color: white;
-    border-radius: 8px;
-    padding: 5px;
-    transition: 0.3s ease;
+.navegacao ul li a:hover {
+  background: rgb(32, 32, 32);
+  color: white;
+  border-radius: 8px;
+  padding: 5px;
+  transition: 0.3s ease;
 }
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: black;
-    height: auto;
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  height: auto;
 }
-main h1{
-    color: #F2C84B;
-    font-family: 'Archivo', sans-serif;
-    margin  : 15px 0px;
+main h1 {
+  color: #f2c84b;
+  font-family: "Archivo", sans-serif;
+  margin: 15px 0px;
 }
-.menuAtivo{
-    background: rgb(32, 32, 32);
-    color: white !important;
-    border-radius: 8px;
-    padding: 5px;
-    transition: 0.3s ease;
+.menuAtivo {
+  background: rgb(32, 32, 32);
+  color: white !important;
+  border-radius: 8px;
+  padding: 5px;
+  transition: 0.3s ease;
 }
-.ajusteTabela table{
-    width: 100%;
-    border-color: black !important;
+.ajusteTabela table {
+  width: 100%;
+  border-color: black !important;
 }
-.novoCliente{
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    margin-bottom: 15px;
-    width: 100%;
+.novoCliente {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-bottom: 15px;
+  width: 100%;
 }
-.ajusteTabela table thead tr th{
-    background-color: black;
+.ajusteTabela table thead tr th {
+  background-color: black;
 }
-.ajusteTabela{
-    background-color: #F2C84B;
-    padding: 15px 15px 2px 15px;
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 30px !important;
+.ajusteTabela {
+  background-color: #f2c84b;
+  padding: 15px 15px 2px 15px;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 30px !important;
 }
-.ajusteTabela th{
-    color: #F2C84B !important;
+.ajusteTabela th {
+  color: #f2c84b !important;
 }
-
 
 .cardi {
-    width: 90%;
-    margin: 0 auto;
-    border-radius: 20px;
-    
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 20px;
 }
 .row img {
-    border: 3px solid #ffffff;
-    border-radius: 10px;
-    padding: 10px;
-    cursor: pointer;
-   
-    margin-left: 20px;
-  }
-  .cardi-title {
-    background-color: #F2C84B;
-    padding: 10px;
-    text-align: center;
-    border-radius: 10px 10px 0px 0px;
-    margin: 0 !important;
-    
-  }
-  .form-select {
-    width: 172% !important;
-  }
-  
-  .form-dash .row {
-    margin-bottom: 3%;
-    align-items: baseline;
-  }
-  
-  .form-dash textarea {
-    height: 150px;
-    resize: none;
-  }
+  border: 3px solid #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
 
-  .form-group label {
-    color: #ffffff !important;
-    text-align: center;
-  } 
-  
-  .cardi-body {
-    padding: 30px 350px;
-    border: 5px double #F2C84B;
-    margin-bottom: 45px;
-   
-  }
-  .col-md-12 {
-    flex: 0 0 auto;
-   
+  margin-left: 20px;
 }
-  
- 
-  .btn-primary {
-    background-color: #ffffff !important;
-    color: #000000 !important;
-    border: none !important;
-    padding: 15px !important;
-    justify-content: center !important;
-    display: flex;  
-    margin-right: 30%;
-    margin-top: 40px;
-    font-weight: bold;
-  }
+.cardi-title {
+  background-color: #f2c84b;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px 10px 0px 0px;
+  margin: 0 !important;
+}
+.form-select {
+  width: 171% !important;
+}
 
-  .btn-primary:hover{
-    background-color: #F2C84B !important;
-    color: #ffffff !important;
-    transform: scale(1.1);
-  }
-  .offset-md-2 {
-    margin-left: -16.333333% !important;
+.form-dash .row {
+  margin-bottom: 3%;
+  align-items: baseline;
+}
+
+.form-dash textarea {
+  height: 150px;
+  resize: none;
+}
+
+.form-group label {
+  color: #ffffff !important;
+  text-align: center;
+}
+
+.cardi-body {
+  padding: 30px 350px;
+  border: 5px double #f2c84b;
+  margin-bottom: 45px;
+}
+.col-md-12 {
+  flex: 0 0 auto;
+}
+
+.btn-primary {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: none !important;
+  padding: 15px !important;
+  justify-content: center !important;
+  display: flex;
+  margin-right: 30%;
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background-color: #f2c84b !important;
+  color: #ffffff !important;
+  transform: scale(1.1);
+}
+.offset-md-2 {
+  margin-left: -16.333333% !important;
 }
 
 .row {
   width: 210%;
-  margin-left: -57% !important;  
+  margin-left: -57% !important;
   justify-content: space-evenly;
 }
-  
+
 .cardi-bo {
-  padding: 30px ;
-  border: 5px double #F2C84B;
+  padding: 30px;
+  border: 5px double #f2c84b;
   margin-bottom: 45px;
   display: flex;
 }
@@ -234,13 +225,31 @@ main h1{
   width: 70%;
 }
 
+.display-4 {
+  background-color: #f2c84b;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px 10px 0px 0px;
+  
+  width: 133%;
+  margin-left: -19%;
+  
+}
 
+.caixa {
+  border: 5px double #f2c84b;
+  padding: 50px;
+  width: 133%;
+  margin-left: -19%;
+}
 
+label {
+  color: #ffffff;
+}
 
-
-
-
-
-
+#AtualizarBtn {
+  display: flex;
+  margin-left: 39%;
+}
 
 

@@ -78,10 +78,15 @@ if (isset($_POST['marcaProduto'])) {
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="statusProduto" class="col-sm-2 col-form-label">Status:</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="statusProduto" name="statusProduto" required placeholder="">
+                
+                        <div class="row">
+                            <div class="form-group col-sm-6 offset-md-2">
+                                <select class="form-select col-sm-2" name="statusProduto" id="statusProduto">
+                                    <option>Status</option> 
+                                    <option value="ATIVO">ATIVO</option>
+                                    <option value="DESATIVO">DESATIVO</option>
+                                 
+                                </select>
                             </div>
                         </div>
 

@@ -8,7 +8,7 @@ $produto = new ProdutoClass($id);
 
 if (isset($_POST['marcaProduto'])) {
 
-    
+
     $marcaProduto = $_POST['marcaProduto'];
     $nomeProduto = $_POST['nomeProduto'];
     $validadeProduto = $_POST['validadeProduto'];
@@ -17,7 +17,7 @@ if (isset($_POST['marcaProduto'])) {
     $statusProduto = $_POST['statusProduto'];
 
 
-   
+
     require_once('class/produtos.php');
 
 
@@ -44,7 +44,7 @@ if (isset($_POST['marcaProduto'])) {
 
 
 
-    <div>
+    <div class="caixa">
 
 
 
@@ -80,7 +80,7 @@ if (isset($_POST['marcaProduto'])) {
         </div>
 
         <div class="col-12">
-            <button type="submit" class="btn btn-primary">Atualizar Produto</button>
+            <button type="submit" class="btn btn-primary" id="AtualizarBtn">Atualizar Produto</button>
         </div>
     </div>
 

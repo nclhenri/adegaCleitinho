@@ -56,7 +56,7 @@ if (isset($_POST['nomeFuncionario'])) {
 
 
 
-    <div>
+    <div class="caixa">
 
         <div class="mb-3">
             <label for="formFile" class="form-label">Foto:</label>
@@ -112,7 +112,7 @@ if (isset($_POST['nomeFuncionario'])) {
         </div>
 
         <div class="col-12">
-            <button type="submit" class="btn btn-primary">Atualizar Produto</button>
+            <button type="submit" class="btn btn-primary" id="AtualizarBtn" >Atualizar Produto</button>
         </div>
     </div>
 

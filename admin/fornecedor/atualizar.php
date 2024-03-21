@@ -37,7 +37,7 @@ if(isset($_POST['nomeFornecedor'])){
 
 
 
-    <div>
+    <div class="caixa">
 
 
 
@@ -73,7 +73,7 @@ if(isset($_POST['nomeFornecedor'])){
         </div>
 
         <div class="col-12">
-            <button type="submit" class="btn btn-primary">Atualizar Fornecedor</button>
+            <button type="submit" class="btn btn-primary" id="AtualizarBtn">Atualizar Fornecedor</button>
         </div>
     </div>
 
