@@ -18,19 +18,19 @@ if (isset($_POST['email'])) {
     $assunto = 'Adega cleitinho';
 
     require_once('admin/class/email.php');
- 
+
     $contato = new contatoEmail();
- 
-    $contato->nomeContato =$nome;
- 
-    $contato->emailContato =$email;
- 
+
+    $contato->nomeContato = $nome;
+
+    $contato->emailContato = $email;
+
     $contato->telContato = $fone;
- 
-    $contato->assuntoContato =$mens;
- 
- 
-    $contato -> Inserir();
+
+    $contato->assuntoContato = $mens;
+
+
+    $contato->Inserir();
 
 
     require_once('mailer/Exception.php');
@@ -121,10 +121,7 @@ if (isset($_POST['email'])) {
 
         <section class="maps">
             <div>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.4931018576895!2d-46.28625477867535!3d-23.47874216069198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce7be20e8a0afd%3A0xac5e04887dd5bd76!2sR.%20Manoel%20Preto%2C%20100%20-%20Vila%20Augusta%2C%20Itaquaquecetuba%20-%20SP%2C%2008593-130!5e0!3m2!1spt-BR!2sbr!4v1696428025534!5m2!1spt-BR!2sbr"
-                    width="600" height="700" style="border:20;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.4931018576895!2d-46.28625477867535!3d-23.47874216069198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce7be20e8a0afd%3A0xac5e04887dd5bd76!2sR.%20Manoel%20Preto%2C%20100%20-%20Vila%20Augusta%2C%20Itaquaquecetuba%20-%20SP%2C%2008593-130!5e0!3m2!1spt-BR!2sbr!4v1696428025534!5m2!1spt-BR!2sbr" width="600" height="700" style="border:20;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
 
@@ -135,13 +132,14 @@ if (isset($_POST['email'])) {
 
 
                     <div class="contatoN wow animate__animated animate__fadeInUp">
-                        <h2>Contato</h2>
+                        <h2>Enviar meu pedido</h2>
+                        <h3 id="frete" style="color: white;text-align: center;">+R$ 5,00 de frete </h3>
                         <h4>
                             <?php
                             if ($ok == 1) {
-                                echo $nome . ", sua mensagem foi enviada com sucesso !";
+                                echo $nome . ", seu pedido foi solicitado !";
                             } else if ($ok == 2) {
-                                echo $nome . "Não foi possível enviar sua mensagem. tente mais tarde !";
+                                echo $nome . "Não foi possível enviar seu pedido. tente mais tarde !";
                             }
                             ?>
                         </h4>
@@ -152,14 +150,12 @@ if (isset($_POST['email'])) {
                                 <div class="caixas">
                                     <div>
                                         <label for="nome">Nome :</label>
-                                        <input type="text" name="nome" id="nome" placeholder="Informe seu nome : "
-                                            required>
+                                        <input type="text" name="nome" id="nome" placeholder="Informe seu nome : " required>
                                     </div>
 
                                     <div>
                                         <label for="email">E-mail :</label>
-                                        <input type="email" name="email" id="email" placeholder="Informe seu e-mail : "
-                                            required>
+                                        <input type="email" name="email" id="email" placeholder="Informe seu e-mail : " required>
                                     </div>
 
                                     <div>
@@ -172,13 +168,12 @@ if (isset($_POST['email'])) {
 
                                     <div>
                                         <label for="mens">Mensagem</label>
-                                        <textarea name="mens" id="mens" cols="42" rows="5"
-                                            placeholder="Deixei sua Mensagem :"></textarea>
+                                        <textarea name="mens" id="mens" cols="42" rows="5" placeholder="Deixei sua Mensagem :"></textarea>
                                     </div>
                                 </div>
                                 <div class="butao ">
                                     <input type="submit" value="Enviar por E-mail">
-                                    <input type="button" value="Enviar por WhatsApp" onclick="Enviarwhats()">
+
 
                                 </div>
                             </form>

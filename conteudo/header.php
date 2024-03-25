@@ -32,7 +32,7 @@
                     </div>
 
                     <li>
-                        <a href="contato.php">Contato</a>
+                        <a href="pedidos.php">Fazer pedido</a>
                     </li>
                 </ul>
 

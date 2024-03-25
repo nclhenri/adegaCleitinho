@@ -4,9 +4,8 @@ $paginaAtual = @$_GET['p'];
 session_start();
 
 if (isset($_SESSION['idFuncionario'])) {
-    echo "!";
 } else {
-    header("Location:http://localhost/adega/");
+    header("Location:https://adegacleitinho.smpsistema.com.br/");
     exit();
 }
 ?>
