@@ -32,7 +32,7 @@
 }
 
 @media (max-width: 535px) {
-  #login2 {
+  #login2 img{
     display: none;
   }
   aside a {
@@ -59,6 +59,9 @@
 
 
 @media (max-width: 495px) {
+  #login2 a{
+    display: none;
+  }
   aside a {
     font-size: 18px !important;
   }
@@ -85,6 +88,9 @@
 }
 
 @media (max-width: 430px) {
+  #login2 a {
+    display: none;
+  }
   aside a {
     font-size: 16px !important;
   }
@@ -434,7 +440,7 @@
   footer section {
     padding: 9px;
   }
-  #login2 {
+  #login2 a{
     display: none;
   }
 
@@ -463,7 +469,7 @@
     flex-direction: column;
     justify-content: center;
   }
-  #login2 {
+  #login2 a{
     display: none;
   }
 }
@@ -473,7 +479,7 @@
     padding: 0px !important;
     padding-bottom: 10px !important;
   }
-  #login2 {
+  #login2 a{
     display: none;
   }
 }
