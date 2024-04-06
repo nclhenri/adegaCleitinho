@@ -25,15 +25,21 @@
   .cardEnergia {
     width: 33% !important;
   }
+  #login2 {
+    display: none;
+  }
 
 }
 
 @media (max-width: 535px) {
+  #login2 {
+    display: none;
+  }
   aside a {
     font-size: 17px !important;
   }
 
-  cardEnergia div {
+  .cardEnergia div {
     width: 95px !important;
 
   }
@@ -428,6 +434,9 @@
   footer section {
     padding: 9px;
   }
+  #login2 {
+    display: none;
+  }
 
   /* Fim Campo Footer */
 }
@@ -454,12 +463,18 @@
     flex-direction: column;
     justify-content: center;
   }
+  #login2 {
+    display: none;
+  }
 }
 
 @media (max-width: 320px) {
   div:where(.swal2-container).swal2-center>.swal2-popup {
     padding: 0px !important;
     padding-bottom: 10px !important;
+  }
+  #login2 {
+    display: none;
   }
 }
 
