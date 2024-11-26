@@ -474,7 +474,9 @@
   }
   .cardEnergia div img {
     width: 40%;
-    margin-left: 15px;
+  }
+  .logoTamanho img {
+    width: 65%;
   }
   .cardEnergia h3 {
     font-size: 0.4em !important;
@@ -489,16 +491,11 @@
     margin: 0;
     margin: 7px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
   }
   .cardEnergia div {
     height: 140px;
-  }
-
-  .fundoComprar {
-    margin-left: 9px;
-  }
-  .fundoComprar1 {
-    margin-left: 9px;
   }
   .duplo {
     height: 765px;
@@ -517,11 +514,11 @@
     padding: 5px;
   }
   .menu ul li:nth-child(1) {
-    margin-top: 25%;
-    margin-bottom: 80px;
+    margin-top: 10%;
+    margin-bottom: 60px;
   }
   .menu ul li {
-    margin-bottom: 75px;
+    margin-bottom: 30px;
   }
   .campoBuscar div input {
     width: 95%;
@@ -535,5 +532,65 @@
   }
   .todoContato div {
     padding: 5px 0px 10px 5px;
+  }
+  .user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .campoBuscar {
+    padding: 120px 0px 275px;
+  }
+  .butao input {
+    width: 65%;
+  }
+  .sair {
+    padding: 0px 14px;
+    margin-bottom: 15px;
+  }
+  .fundo img {
+    width: 36%;
+    padding: 20px;
+  }
+  .imglogoForm {
+    margin-bottom: 20px;
+  }
+  .fundo {
+    padding: 25px 0px 5px 0px;
+  }
+  .mb-5 {
+    margin-bottom: 1.5rem !important;
+    margin-left: 20px;
+  }
+  .form-control {
+    width: 90%;
+  }
+  .form-floating > .form-control,
+  .form-floating > .form-control-plaintext,
+  .form-floating > .form-select {
+    height: calc(2.1rem + calc(var(--bs-border-width) * 2));
+    min-height: calc(2.5rem + calc(var(--bs-border-width) * 2));
+  }
+  .form-floating > label {
+    padding: 9px;
+  }
+  .btnlogin button {
+    width: 45%;
+    padding: 3px;
+    font-size: 1.2em;
+  }
+  .btnlogin {
+    margin-bottom: 20px;
+    margin-top: 30px;
+  }
+  .cardPromocoes {
+    max-width: 75%;
+    border-radius: 15px;
+  }
+  .promocoes button {
+    width: 85%;
+    padding: 15px;
+    margin-top: 30px;
   }
 }
